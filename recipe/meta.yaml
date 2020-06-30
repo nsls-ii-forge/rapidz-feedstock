@@ -1,0 +1,40 @@
+{% set name = "rapidz" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "ff4c03dc965b1721399effcc13b407c3fcd38c44405ef1a5edfd28699f0c77cc" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/xpdAcq/{{ name }}/releases/download/{{ version }}/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - six
+    - toolz
+    - tornado
+    - zict
+
+test:
+  imports:
+    - rapidz
+    - rapidz.core
+
+about:
+  home: https://github.com/xpdAcq/rapidz
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
+  summary: "Manage streaming data, optionally with Dask, Pandas and more"
+  doc_url: https://xpdacq.github.io/rapidz
+  dev_url: https://github.com/xpdAcq/rapidz
