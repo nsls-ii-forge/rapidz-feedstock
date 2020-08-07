@@ -5,7 +5,7 @@ Home: https://github.com/xpdAcq/rapidz
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Manage streaming data, optionally with Dask, Pandas and more
 
