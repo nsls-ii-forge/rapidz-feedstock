@@ -1,13 +1,13 @@
 {% set name = "rapidz" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "ff4c03dc965b1721399effcc13b407c3fcd38c44405ef1a5edfd28699f0c77cc" %}
+{% set version = "0.2.1" %}
+{% set sha256 = "9a2d8098e61a74473dd554bd21cd4ff5b7c67392767d7d394b397cccc18acacc" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/xpdAcq/{{ name }}/releases/download/{{ version }}/{{ version }}.tar.gz
+  url: https://github.com/xpdAcq/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
